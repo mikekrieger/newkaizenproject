@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Kaizen Solutions</title>
+<link rel="shortcut icon" href="images/kaizenlogo.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kaizen Solutions is a healthcare innovation thinktank. We pride ourselves in introducing new products and services into the marketplace.">
+<meta name="author" content="Kaizen Solutions">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+<div class="logocontainer">
+    <img src="images/kaizenlogo.png">
+</div>
+<div class="container">
+<nav>
+<a class="toggleMenu" href="#">Menu</a>
+	<ul class="nav">
+    	<li class="test">
+			<a href="products.html">Products</a>
+				<ul class="navigation2">
+					<li><a href="patienttalkback.html">Patient Talkback</a></li>
+					<li><a href="dstat.html">DStat</a></li>
+				</ul>
+		</li>
+				<li><a href="consulting.html">Consulting Services</a></li>
+				<li><a href="community.html">Our Community</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="careers.html">Careers</a></li>
+	</ul>
+</nav>
+</div>
+	<div class="mainarea">
+		<div id="photobox">
+			<div id="photoarea">
+				<img src="images/frontimage.jpg">
+			</div>
+			<div id="textarea">
+				<h1>Changing the World One Healthcare Solution At a Time</h1>
+			</div>
+		</div>
+		<div id="mainarea2">
+		<h2>Delivering the Best Healthcare Innovation</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel eros fringilla, vehicula quam sit amet, lobortis justo. Integer quis tellus fringilla, gravida nulla in, porta nibh. Curabitur ut pretium felis. Pellentesque ullamcorper mauris nec placerat feugiat. Ut sodales, massa eget fermentum porttitor, felis nisi tempus ante, eget rhoncus nibh nulla eget diam. Suspendisse sodales neque vitae quam condimentum fringilla. Fusce eget nisl scelerisque, cursus eros ac, gravida tellus. Integer fermentum rutrum ipsum quis rhoncus. Quisque at est mattis, bibendum nibh sed, congue odio. Suspendisse sit amet tempor quam, vitae porta lacus. Suspendisse potenti. Sed lobortis erat et purus faucibus venenatis.</p>
+
+		<h3>Patient Talkback</h2>
+		<p>Pellentesque nunc lacus, vulputate nec dictum in, iaculis quis lacus. Etiam mollis metus nec nulla sollicitudin euismod. Etiam vitae odio et diam placerat viverra non ac sapien. Mauris congue elit mollis est varius facilisis. Maecenas luctus tortor ante, quis interdum mauris molestie molestie. Nulla congue facilisis luctus. Aenean accumsan interdum est, non suscipit mauris. Aliquam libero metus, lobortis eget hendrerit ut, vestibulum id ante. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed consectetur nibh enim, vitae accumsan mauris dapibus ac.</p>
+
+		<h3>DStat</h3> 
+		<p>Phasellus vel sapien a eros vulputate ultrices vitae vitae nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet commodo quam sit amet volutpat. Morbi lobortis, magna vel laoreet varius, mauris sapien malesuada ante, at vestibulum lacus mi non eros. Sed nec est sit amet est ultricies vehicula a posuere nunc. Ut non urna velit. Phasellus dapibus urna ullamcorper tortor vehicula aliquam id laoreet nulla. Nulla fringilla odio id purus volutpat interdum.</p>
+
+		<h3>Management Consulting</h3> 
+		<p>Donec augue turpis, tincidunt sed varius vel, malesuada ac tortor. Phasellus aliquet ut nisi quis pellentesque. Integer ornare lacus a consequat molestie. Maecenas lectus nibh, tincidunt quis egestas ac, feugiat at lacus.Praesent vitae libero elit. Cras placerat gravida lacus, at pulvinar libero hendrerit eu. Ut a est accumsan, tincidunt purus ut, tincidunt sem. Suspendisse nec ornare dui, ut placerat tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare tincidunt lectus, eget fringilla metus consequat vel.</p>
+	</div>
+</div>
+	<div class="footer">
+    	<div class="footerArea1">
+			<h4>About Us</h4>
+				<p>Phasellus vel sapien a eros vulputate ultrices vitae vitae nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p><a href="aboutus.html">Learn More</a></p>
+		</div>
+		<div class="footerarea2">
+			<h4>Our Products &amp; Services </h4>
+			<p>Phasellus vel sapien a eros vulputate ultrices vitae vitae nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p><a href="products.html">Learn More</a></p>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	
+	<script type="text/javascript">
+		var ww = document.body.clientWidth;
+		$(document).ready(function() {
+		    $(".toggleMenu").click(function(e) {
+		        e.preventDefault();
+		        $(".nav").toggle();
+		    });
+		    $(".nav li a").each(function() {
+		        if ($(this).next().length > 0) {
+		            $(this).addClass("parent");
+		        };
+		    })
+		    adjustMenu();
+		});
+		function adjustMenu() {
+		    if (ww < 800) {
+		        $(".toggleMenu").css("display", "inline-block");
+		        $(".nav").hide();
+		        $(".nav li a.parent").click(function(e) {
+		            e.preventDefault();
+		            $(this).parent("li").toggleClass('hover');
+		        });
+		    } else {
+		        $(".toggleMenu").css("display", "none");
+		        $(".nav li").hover(function() {
+		                $(this).addClass('hover');
+		            }, function() {
+		                $(this).removeClass('hover');
+		        });
+		    }
+		}
+	</script>
+</body>
+</html>
